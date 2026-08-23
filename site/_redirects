@@ -1,0 +1,2 @@
+# www → non-www 통일 (중복 URL 방지, canonical과 일치시킴)
+https://www.ibbusiness.kr/*  https://ibbusiness.kr/:splat  301

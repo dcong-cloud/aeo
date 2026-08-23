@@ -1,0 +1,23 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), interest-cohort=()
+
+# 이미지·폰트: 파일명이 바뀌지 않으므로 장기 캐싱
+/img/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML: 항상 최신 확인 (수정 즉시 반영되어야 함)
+/
+  Cache-Control: public, max-age=0, must-revalidate
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+
+# 크롤러가 읽는 파일: 짧게 캐싱
+/robots.txt
+  Cache-Control: public, max-age=3600
+/sitemap.xml
+  Cache-Control: public, max-age=3600
+/llms.txt
+  Cache-Control: public, max-age=3600
